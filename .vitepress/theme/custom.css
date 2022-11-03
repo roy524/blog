@@ -1,0 +1,21 @@
+:root {
+
+}
+*, :before, :after {
+  box-sizing: border-box;
+  border: 0 solid;
+}
+
+.VPNav {
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(237,242,247);
+}
+
+.dark .VPNav {
+  border-bottom-color: rgba(84,84,84,0.48);
+}
+
+.VPNavBar {
+  max-width: 1200px;
+  margin: 0 auto;
+}
