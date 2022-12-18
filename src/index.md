@@ -1,5 +1,10 @@
 ---
 layout: home
+title: home
 ---
 
-测试
+<script setup>
+  import Home from '@theme/components/Home.vue'
+</script>
+
+<Home />

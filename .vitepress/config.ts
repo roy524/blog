@@ -1,6 +1,27 @@
 import { defineConfig } from 'vitepress';
 
-export default defineConfig({
-  title: "Roy's blog",
-  srcDir: 'src',
-})
+import type { Config as ThemeConfig } from '@vue/theme'
+
+import getPages from './utils/getPages'
+
+const nav: ThemeConfig['nav'] = [
+  
+]
+
+const sidebar: ThemeConfig['sidebar'] = [
+
+]
+
+const getConfig = async() => {
+  return {
+    title: "Roy's blog",
+    srcDir: 'src',
+    themeConfig: {
+      pages: await getPages(),
+      nav,
+      sidebar
+    }
+  }
+}
+
+export default defineConfig(await getConfig())
